@@ -95,6 +95,14 @@ public class CuratorOperate {
         InterProcessReadWriteLock readWriteLock=new InterProcessReadWriteLock(curatorFramework,"/readWriteLock");
         readWriteLock.readLock();
         readWriteLock.writeLock();
+
+        try {
+            // 执行需要保护的代码块
+        } finally {
+            processMutex.release();
+        }
+
     }
+
 
 }
