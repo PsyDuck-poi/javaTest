@@ -4,6 +4,7 @@ import com.example.sometest.SomeTestApplication;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.framework.recipes.locks.InterProcessReadWriteLock;
+import org.apache.tomcat.util.net.AprEndpoint;
 import org.apache.zookeeper.CreateMode;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -100,6 +101,8 @@ public class CuratorOperate {
             // 执行需要保护的代码块
         } finally {
             processMutex.release();
+            readWriteLock.readLock().release();
+            readWriteLock.writeLock().release();
         }
 
     }
