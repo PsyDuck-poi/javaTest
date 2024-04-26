@@ -1,4 +1,6 @@
-package date_t;
+package com.example.sometest.dateTime;
+
+import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;

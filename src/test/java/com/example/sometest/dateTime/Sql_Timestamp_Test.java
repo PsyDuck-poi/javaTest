@@ -1,6 +1,6 @@
-package date_t;
+package com.example.sometest.dateTime;
 
-import java.sql.Timestamp;
+import org.junit.Test;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

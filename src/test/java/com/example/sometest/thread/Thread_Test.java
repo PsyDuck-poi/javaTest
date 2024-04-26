@@ -1,4 +1,4 @@
-package thread_t;
+package com.example.sometest.thread;
 
 public class Thread_Test extends Thread {
 
